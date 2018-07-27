@@ -48,6 +48,15 @@ class RoutesConfig extends Config {
                     }
                 }
             })
+            .state('tab.settings', {
+                url: '/settings',
+                views: {
+                    'tab-settings': {
+                        templateUrl: settingsTemplateUrl,
+                        controller: 'SettingsCtrl as settings',
+                    }
+                }
+            })
             .state('login', {
                 url: '/login',
                 templateUrl: loginTemplateUrl,
@@ -65,16 +74,8 @@ class RoutesConfig extends Config {
                 resolve: {
                     user: this.isAuthorized
                 }
-            })
-            .state('tab.settings', {
-                url: '/settings',
-                views: {
-                    'tab-settings': {
-                        templateUrl: settingsTemplateUrl,
-                        controller: 'SettingsCtrl as settings',
-                    }
-                }
             });
+
 
         this.$urlRouterProvider.otherwise('tab/chats');
     }
