@@ -5,6 +5,5 @@
       "987654321"
     ],
     "MASTER_CODE": "1234"
-  },
-  "MONGO_URL":"mongodb://admin:admin103@ds018568.mlab.com:18568/whatsapp-clone"
+  }
 }
